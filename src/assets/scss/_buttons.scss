@@ -1,0 +1,97 @@
+
+%btn {
+    border: none;
+    border-radius: $radius;
+    font-size: 1.1rem;
+    font-family: inherit;
+    letter-spacing: $spacing;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    box-shadow: 2px 5px 10px rgba(0,0,0,0.1);
+    font-weight: 500;
+    transition: .6s linear;
+    &:focus{
+        outline: none;
+    }
+  }
+
+  .btn{
+      @extend %btn;
+      @include button(.8rem 1.2rem,  $clr-primary-6, $clr-primary-6);
+  }
+  .btn-sm{
+    @include button(.8rem 1rem,  $clr-primary-6, $clr-primary-6);
+    font-size: 1rem
+  }
+  .btn-md{
+    @include button(.9rem 1.4rem,  $clr-primary-6, $clr-primary-6);
+    
+  }
+  .btn-lg{
+     @include button(1.2rem 2.2rem,  $clr-primary-6, $clr-primary-6)
+  }
+  .bg-grey{
+      background: $clr-grey;
+      color: $clr-dark-4;
+  }
+  .bg-grey-2{
+    background: $clr-grey-2;
+    color: $clr-dark-4;
+    &:hover{
+        background: $clr-grey;
+      }
+ }
+ .bg-primary{
+    background: $clr-primary;
+    &:hover{
+        background: $clr-primary-2;
+      }
+ }
+ .bg-secondary{
+    background: $clr-dark;
+ }
+ .bg-secondary-2{
+    background: $clr-dark-2;
+    &:hover{
+        background: $clr-dark;
+      }
+ }
+ .bg-danger{
+    background: $clr-danger;
+    &:hover{
+        background: $clr-danger-2;
+      }
+ } 
+ .bg-danger-2{
+    background: $clr-danger-2;
+ } 
+ .bg-primary-6{
+    background: rgba(41, 98, 255, 0.1);
+ }
+ .bg-primary-2{
+    background: $clr-primary-2
+ }
+ .outline{
+     border: 1.5px solid $clr-primary-4;
+     color: $clr-primary-4;
+ }
+ .shadow-off{
+     box-shadow: none;
+ }
+ .clr-primary{
+     color: $clr-primary-4;
+ }
+ .clr-dark{
+    color: $clr-dark-6 ;
+ }
+ .has-icon-left{
+     padding-left: 3rem;
+ }
+ .has-icon-right{
+    padding-right: 3rem;
+}
+
+
+
+  

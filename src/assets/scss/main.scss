@@ -1,0 +1,154 @@
+@import "config";
+@import "buttons";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.icon{
+    position: absolute;
+    top: 35%;
+    left: 1.4rem
+}
+.icon-right{
+    position: absolute;
+    top: 35%;
+    right: 1.4rem
+}
+
+main{
+    .sidenav{
+        background: $clr-primary-6;
+        padding: 3rem;
+        display: none;
+        .title{
+            padding-bottom: 6rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+            span{
+                color: $clr-danger-1;
+            }
+        }
+        nav{
+            ul{
+                li{
+                    list-style: none;
+                    font-size: 1rem;
+                    text-transform: capitalize;
+                    padding: 1rem 0;
+                    color: $clr-grey;
+                    &:nth-child(5){
+                        color: $clr-black;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+    .container{
+        width: 90%;
+        margin: 0 auto;
+        padding: 1rem;
+        letter-spacing: $spacing;
+        .title{
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        .button-wrapper{
+            .btn-card{
+                display: flex;
+                justify-content: space-between ;
+                gap: 1rem;   
+                margin: 2rem 0;
+                .single-btn{
+                    line-height: 3;
+                    label{
+                        font-size: .6rem;
+                    }
+                }
+            }
+            .col-sm-1{
+               @include GridLayout(1fr);
+            }
+            .col-sm-3{
+                @include GridLayout(1fr 1fr);
+               align-items: flex-end;
+               gap: 2rem;
+             }
+        }
+        footer{
+            text-align: center;
+            padding: 1rem;
+            letter-spacing: $spacing;
+            color: $clr-grey;
+            font-size: .8rem;
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-sm){
+    main{
+        .container{
+            .button-wrapper{
+                width: 85%;
+                .btn-card{
+                    button{
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: $breakpoint-sm){
+    main{
+        @include GridLayout(auto 2fr);
+        .sidenav{
+            display: block;
+        }
+        .container{
+            .button-wrapper{
+                .btn-card{
+                    button{
+                        font-size: .8rem;
+                        font-weight: 400;
+                    }
+                }
+                .col-sm-1{
+                    @include GridLayout(1fr 1fr);
+                    gap: 4rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-lg){
+    main{
+        .container{
+            .button-wrapper{
+                width: 90%;
+                .btn-card{
+                    button{
+                        font-size: 1rem;
+                    }
+                }
+                .col-sm-3{
+                    @include GridLayout(1fr 1fr 1fr);
+                }
+                .col-md-4{
+                    @include GridLayout(repeat(4, 1fr));
+                }
+                .md{
+                    width: 60%;
+                }
+            }
+        }
+    }
+}

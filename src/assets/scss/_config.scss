@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+
+// color variables
+$clr-primary: #3D5AFE;
+$clr-primary-2: #0039CB;
+$clr-primary-4: #2962FF;
+$clr-primary-6: #FAFBFD;
+$clr-danger: #D32F2F;
+$clr-danger-1: #F7542E;
+$clr-danger-2: #9A0007;
+$clr-black: #090F31;
+$clr-dark: #1C313A;
+$clr-dark-2: #455A64;
+$clr-dark-4: #3F3F3F;
+$clr-dark-6: #9E9E9E;
+$clr-grey: #AEAEAE;
+$clr-grey-2: #E0E0E0;
+
+// Breakpoints
+$breakpoint-sm: 520px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+$spacing: .8px;
+$radius: .6rem;
+
+ @mixin  button($p, $bg, $clr) {
+   padding: $p;
+   background: $bg;
+   color: $clr;
+ }
+ @mixin GridLayout($grid-col) {
+   display: grid;
+   grid-template-columns: $grid-col;
+ }
